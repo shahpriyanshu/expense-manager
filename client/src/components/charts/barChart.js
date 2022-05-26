@@ -24,6 +24,7 @@ const BarChart = ({expenses}) => {
       );
 
       useEffect(() => {
+        debugger;
         setChartAttribute(prepareChartData());
     }, [expenses]);
 
@@ -81,6 +82,8 @@ const BarChart = ({expenses}) => {
     return (
         <Card>
            {chartAttribute && <Bar
+           height="400px"
+           width="400px"
             options={options}
             data={chartAttribute}
            />}

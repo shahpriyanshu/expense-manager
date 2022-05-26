@@ -72,6 +72,8 @@ const PieChart = ({expenses}) => {
     return (
         <Card>
            {chartAttribute && <Pie
+            height="400px"
+            width="400px"
             data={chartAttribute}
             options={options}
            />}

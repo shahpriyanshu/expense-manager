@@ -78,8 +78,10 @@ const RecordExpense = ({ title, recordExpense, actionExpenseAttribute, isModalOp
           <Flex>
             {expenseAttributes?.amount && <Label>Amount</Label>}
             <Input
+              required
               name='amount'
               type='number'
+              min="1"
               id='expense-amount'
               value={expenseAttributes?.amount}
               placeholder='Amount'
@@ -89,6 +91,7 @@ const RecordExpense = ({ title, recordExpense, actionExpenseAttribute, isModalOp
           <Flex>
             <Label> Date</Label>
             <Input
+              required
               name='date'
               type='date'
               value={expenseAttributes.date}
@@ -97,7 +100,7 @@ const RecordExpense = ({ title, recordExpense, actionExpenseAttribute, isModalOp
               onChange={(e) => handlInputChange(e)}
             />
           </Flex>
-          <Button type='submit' alignRight>
+          <Button type='submit' alignRight disabled={!expenseAttributes.amount}>
             Record Expense
           </Button>
         </form>
