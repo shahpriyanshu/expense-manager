@@ -12,5 +12,5 @@
         
   
   
-  ###### web app will be served on http://localhos:9000
+  ###### web app will be served on http://localhost:9000
   
