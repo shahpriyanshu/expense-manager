@@ -55,7 +55,6 @@ COPY --from=test_base --chown=node:node /expense-manager/server/package.json ./s
 
 
 EXPOSE 9000
-EXPOSE 3000
 
 ENV NODE_CONFIG_DIR=./server/config
 

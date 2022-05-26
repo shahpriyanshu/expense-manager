@@ -23,8 +23,10 @@ const Signup = (props) => {
                     email: emailId
                 }
             })
-            setUserDetails(user);
-            toggleVerificationState(true);
+            if (user) {
+                setUserDetails(user);
+                toggleVerificationState(true);
+            }
         } catch (err) {
             console.error(err);
             setError(err.message);
